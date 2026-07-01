@@ -1,9 +1,10 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
 const navigation = [
-  { to: '/about', label: 'About' },
-  { to: '/discography', label: 'Discography' },
-  { to: '/links', label: 'Links' },
+  { to: '/om-synliga', label: 'Om Synliga' },
+  { to: '/bandmedlemmar', label: 'Bandmedlemmar' },
+  { to: '/diskografi', label: 'Diskografi' },
+  { to: '/lankar', label: 'Länkar' },
   { to: '/press', label: 'Press' },
 ]
 

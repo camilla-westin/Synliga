@@ -93,7 +93,7 @@ function About() {
   return (
     <section className="max-w-4xl">
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
-        About
+        Om Synliga
       </p>
       <h1 className="text-4xl font-bold text-white sm:text-5xl">Biografi</h1>
       <div className="mt-8 space-y-5 text-base leading-8 text-zinc-300 sm:text-lg">

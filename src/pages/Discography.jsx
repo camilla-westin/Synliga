@@ -158,7 +158,7 @@ function Discography() {
   return (
     <section>
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
-        Discography
+        Discografi
       </p>
       <h1 className="text-4xl font-bold text-white">Discography</h1>
       <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">

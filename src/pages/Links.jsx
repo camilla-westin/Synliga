@@ -8,7 +8,7 @@ function Links() {
   return (
     <section className="max-w-3xl">
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
-        Links
+        Länkar
       </p>
       <h1 className="text-4xl font-bold text-white">Links</h1>
       <div className="mt-8 divide-y divide-white/10 rounded-lg border border-white/10">
