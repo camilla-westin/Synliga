@@ -3,9 +3,10 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import About from './pages/About.jsx'
-import Contact from './pages/Contact.jsx'
 import Discography from './pages/Discography.jsx'
+import Home from './pages/Home.jsx'
 import Links from './pages/Links.jsx'
+import Press from './pages/Press.jsx'
 import './styles.css'
 
 const router = createBrowserRouter([
@@ -13,11 +14,12 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
-      { index: true, element: <About /> },
+      { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
       { path: 'discography', element: <Discography /> },
       { path: 'links', element: <Links /> },
-      { path: 'contact', element: <Contact /> },
+      { path: 'press', element: <Press /> },
+      { path: 'contact', element: <Home /> },
     ],
   },
 ])

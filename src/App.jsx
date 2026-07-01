@@ -4,7 +4,7 @@ const navigation = [
   { to: '/about', label: 'About' },
   { to: '/discography', label: 'Discography' },
   { to: '/links', label: 'Links' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/press', label: 'Press' },
 ]
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       <header className="border-b border-white/10 bg-zinc-950/90">
         <nav className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
-          <NavLink to="/about" className="text-2xl font-semibold tracking-wide">
+          <NavLink to="/" className="text-2xl font-semibold tracking-wide">
             Synliga
           </NavLink>
 
