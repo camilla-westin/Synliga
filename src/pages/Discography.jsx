@@ -1,7 +1,157 @@
 const releases = [
-  { title: 'First Light', year: '2026', type: 'Single' },
-  { title: 'Northern Signals', year: '2025', type: 'EP' },
-  { title: 'Static Bloom', year: '2024', type: 'Album' },
+  {
+    title: 'Synliga i mörker',
+    year: '2012',
+    type: 'Album',
+    description: 'Innehåller alla låtarna från krogshowen med samma namn.',
+    links: [
+      {
+        label: 'Lyssna på Spotify',
+        href: 'http://open.spotify.com/album/0TzvpbmrJBXdgbKDOvC2Cm',
+      },
+      {
+        label: 'Köp på iTunes',
+        href: 'https://itunes.apple.com/us/artist/synliga/id377209464',
+      },
+    ],
+  },
+  {
+    title: 'Råkk ‘n’ råll',
+    year: '2007',
+    type: 'Singel',
+    description:
+      'Du behöver inte vara dum i huvudet för att spela Råkk ‘N’ Råll, men det hjälper!',
+    links: [
+      {
+        label: 'Lyssna på Spotify',
+        href: 'http://open.spotify.com/track/3PkUGmecT8syfYq5FWpVWD',
+      },
+    ],
+  },
+  {
+    title: 'Sinnenas Rum',
+    year: '2006',
+    type: 'Album',
+    description:
+      'Innehåller de flesta låtarna ur krogshowen BlindDate, singelspåren All over the world och Slimmat sparpaket samt annat ur Synligas repertoar.',
+    links: [
+      {
+        label: 'Lyssna på Spotify',
+        href: 'http://open.spotify.com/album/3qJdynmBSnaxFI7z8AP605',
+      },
+      {
+        label: 'Köp på iTunes',
+        href: 'https://itunes.apple.com/us/artist/synliga/id377209464',
+      },
+    ],
+  },
+  {
+    title: 'Ett slimmat sparpaket',
+    year: '2004',
+    type: 'Singel',
+    description:
+      'Med Ett slimmat sparpaket, Kärleken är blind idag och Blindaste bandet i landet.',
+    links: [
+      {
+        label: 'Lyssna på Spotify',
+        href: 'http://open.spotify.com/track/5uhRhyaXFfqhG7kl847Vds',
+      },
+    ],
+  },
+  {
+    title: 'Synskadades Melodifestival 2004',
+    year: '2004',
+    type: 'Feature',
+    description:
+      'Synliga har producerat skivan och kompat artisterna i Synskadades Melodifestival 2004. Många av bandets personer medverkar också som låtskrivare.',
+  },
+  {
+    title: 'Energi från kulturkraft',
+    year: '2004',
+    type: 'Feature',
+    description:
+      'Samlingsskivan Energi från Kulturkraft, utgiven av SRF, där 19 synskadade artister presenteras och Synliga medverkar med låten Kärleken är blind idag.',
+  },
+  {
+    title: 'Konsten att åka färdtjänst',
+    year: '2003',
+    type: 'Feature',
+    description:
+      'Utgiven av Unga Synskadade Stockholm & Gotland. Synliga medverkar med låten Ett slimmat sparpaket.',
+  },
+  {
+    title: 'All over the world',
+    year: '2000',
+    type: 'Singel',
+    description:
+      'Singel som släpptes i samband med att Synliga var i Japan 2000.',
+    links: [
+      {
+        label: 'Lyssna på Spotify',
+        href: 'http://open.spotify.com/track/6N2GdFmYh07BrvGycToOBU',
+      },
+    ],
+  },
+  {
+    title: 'Out of sight',
+    year: '1998',
+    type: 'Kassett',
+  },
+  {
+    title: 'Blindträff',
+    year: '1997',
+    type: 'Album',
+    description: 'Resultatet av Synligas krogshow på Mossebacke och Brukarhuset.',
+    links: [
+      {
+        label: 'Lyssna på Spotify',
+        href: 'http://open.spotify.com/album/32nhrqVAQ67nnER7qYuV71',
+      },
+      {
+        label: 'Köp på iTunes',
+        href: 'https://itunes.apple.com/us/artist/synliga/id377209464',
+      },
+    ],
+  },
+  {
+    title: 'Jul hos Ljudolf',
+    year: '1995',
+    type: 'Album',
+    description: 'Synligas spår heter Jag tror på tomten blint.',
+  },
+  {
+    title: 'Gå På',
+    year: '1991',
+    type: 'Album',
+    description:
+      'I november 1991 var Synliga på Kuba och spelade in singeln Gå på/Lite på Calle? tillsammans med slagverkarna Alejandro Pu Bles, Amando de Jesus Dedu Hernandez, Rogelio Ernesto Gatell Coto och trumpetaren Julian Gil Oropesa.',
+  },
+  {
+    title: 'Kallebalik',
+    year: '1990',
+    type: 'Album',
+  },
+  {
+    title: 'Urval',
+    year: '1990',
+    type: 'Album',
+    description:
+      'Skivans namn är Urval och på samlings-LP:n medverkar Synliga med Blind.',
+  },
+  {
+    title: 'Festival',
+    year: '1986',
+    type: 'Album',
+    description:
+      'Skivans namn är Festival och det är en samlings-LP. Synliga medverkar med Finns där ej människa ändå.',
+  },
+  {
+    title: 'Ljudskap',
+    year: '1984',
+    type: 'Album',
+    description:
+      'Skivans namn är Ljudskap och det är en samlings-LP. Synliga medverkar med spåret Blind.',
+  },
 ]
 
 function Discography() {
@@ -11,17 +161,43 @@ function Discography() {
         Discography
       </p>
       <h1 className="text-4xl font-bold text-white">Discography</h1>
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
+      <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {releases.map((release) => (
           <article
             key={release.title}
-            className="rounded-lg border border-white/10 bg-white/[0.04] p-5"
+            className="flex min-h-64 flex-col rounded-lg border border-white/10 bg-white/[0.04] p-5"
           >
-            <p className="text-sm text-zinc-400">{release.type}</p>
+            <div className="flex items-center justify-between gap-4">
+              <p className="text-sm font-medium text-emerald-300">
+                {release.type}
+              </p>
+              <p className="text-sm text-zinc-400">{release.year}</p>
+            </div>
             <h2 className="mt-2 text-xl font-semibold text-white">
               {release.title}
             </h2>
-            <p className="mt-4 text-zinc-300">{release.year}</p>
+            {release.description ? (
+              <p className="mt-4 flex-1 text-sm leading-6 text-zinc-300">
+                {release.description}
+              </p>
+            ) : (
+              <div className="flex-1" />
+            )}
+            {release.links?.length ? (
+              <div className="mt-5 flex flex-wrap gap-2">
+                {release.links.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-md border border-emerald-300/30 px-3 py-2 text-sm font-medium text-emerald-200 transition hover:border-emerald-300 hover:bg-emerald-300 hover:text-zinc-950"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            ) : null}
           </article>
         ))}
       </div>
