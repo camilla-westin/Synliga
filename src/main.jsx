@@ -7,6 +7,7 @@ import BandMembers from './pages/BandMembers.jsx'
 import Discography from './pages/Discography.jsx'
 import Home from './pages/Home.jsx'
 import Links from './pages/Links.jsx'
+import Morkershow from './pages/Morkershow.jsx'
 import Press from './pages/Press.jsx'
 import './styles.css'
 
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: 'om-synliga', element: <About /> },
       { path: 'bandmedlemmar', element: <BandMembers /> },
       { path: 'om-synliga/bandmedlemmar', element: <BandMembers /> },
+      { path: 'morkershow', element: <Morkershow /> },
       { path: 'discography', element: <Discography /> },
       { path: 'diskografi', element: <Discography /> },
       { path: 'links', element: <Links /> },

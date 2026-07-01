@@ -3,6 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 const navigation = [
   { to: '/om-synliga', label: 'Om Synliga' },
   { to: '/bandmedlemmar', label: 'Bandmedlemmar' },
+  { to: '/morkershow', label: 'Mörkershow' },
   { to: '/diskografi', label: 'Diskografi' },
   { to: '/lankar', label: 'Länkar' },
   { to: '/press', label: 'Press' },

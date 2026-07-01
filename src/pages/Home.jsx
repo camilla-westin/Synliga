@@ -27,6 +27,59 @@ const bookingSections = [
   },
 ]
 
+const archivePosts = [
+  {
+    date: 'Maj 09 2023',
+    title:
+      'Synliga is representing Sweden in The International Low-Vision Song Contest 2023',
+    href: 'https://www.synliga.com/blog/2023/05/09/synliga-is-representing-sweden-in-the-international-low-vision-song-contest-2023/',
+    excerpt:
+      'Synliga representerade Sverige i The International Low-Vision Song Contest 2023 med låten “We’re Gonna Have A Party Tonight”.',
+  },
+  {
+    date: 'Dec 13 2013',
+    title: 'Synliga-medlem släpper bok.',
+    href: 'https://www.synliga.com/blog/2013/12/13/synliga-medlem-slapper-bok/',
+    excerpt:
+      'Synligas sångare Sven debuterade som författare med boken “Se upp jag hör dig”.',
+  },
+  {
+    date: 'Sep 28 2013',
+    title: '30 år!',
+    href: 'https://www.synliga.com/blog/2013/09/28/30-ar/',
+    excerpt:
+      'Synliga fyllde 30 år och mindes första spelningen under namnet Synliga den 28 september 1983.',
+  },
+  {
+    date: 'Jun 26 2012',
+    title: 'Synliga @ Kungsträdgården 14 Juni 2012',
+    href: 'https://www.synliga.com/blog/2012/06/26/synliga-kungstradgarden-14-juni-2012/',
+    excerpt:
+      'Ett välrepeterat Synliga spelade på Kungsträdgårdens stora scen under ABF:s 100-årsfirande.',
+  },
+  {
+    date: 'Maj 02 2012',
+    title: 'Öppna barskåpet!',
+    href: 'https://www.synliga.com/blog/2012/05/02/oppna-barskapet/',
+    excerpt:
+      'Ett Synminne från ett kombinerat bandmöte och trivselkväll hemma hos Ulf och Marie.',
+  },
+  {
+    date: 'Apr 17 2012',
+    title: 'Svårt att repa sig',
+    href: 'https://www.synliga.com/blog/2012/04/17/svart-att-repa-sig/',
+    excerpt:
+      'Om konsten att få ihop repetitioner, matpauser och sju personers kalendrar inför ett gig.',
+  },
+  {
+    date: 'Jan 26 2012',
+    title: 'Kidnappad hemsida',
+    href: 'https://www.synliga.com/blog/2012/01/26/kidnappad-hemsida/',
+    excerpt:
+      'Berättelsen om hur synliga.com kom tillbaka efter att domänen och sidan varit övertagna.',
+  },
+]
+
 function Home() {
   return (
     <section>
@@ -119,6 +172,45 @@ function Home() {
               </a>
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
+          Historik
+        </p>
+        <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          Ur Synligas arkiv
+        </h2>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-zinc-300">
+          Några utvalda nedslag från den gamla webbplatsen, sparade här för den
+          som vill följa trådarna bakåt.
+        </p>
+        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {archivePosts.map((post) => (
+            <article
+              key={post.href}
+              className="flex min-h-56 flex-col rounded-lg border border-white/10 bg-white/[0.04] p-5"
+            >
+              <p className="text-sm font-medium text-emerald-300">
+                {post.date}
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-white">
+                {post.title}
+              </h3>
+              <p className="mt-4 flex-1 text-sm leading-6 text-zinc-300">
+                {post.excerpt}
+              </p>
+              <a
+                className="mt-5 w-fit rounded-md border border-emerald-300/30 px-3 py-2 text-sm font-medium text-emerald-200 transition hover:border-emerald-300 hover:bg-emerald-300 hover:text-zinc-950"
+                href={post.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Läs originalet
+              </a>
+            </article>
+          ))}
         </div>
       </section>
     </section>
