@@ -1,0 +1,82 @@
+const members = [
+  {
+    name: 'Christer Tull',
+    role: 'Guitar, Bass, Keyboard & Vocals',
+    paragraphs: [
+      'Gifted with a magical musical sense and perfect pitch this lover of cats is an enormous asset to the band.',
+      'Christer also plays a mean gospel piano with his choir. There is no doubt that he is the one in the band that has the best connection with the big guy upstairs.',
+    ],
+  },
+  {
+    name: 'Frank Skaret',
+    role: 'Drums',
+    paragraphs: [
+      'Frank does a lot of sports and is in good shape, for an old geezer. Frank works hard and feels that free time is for weaklings and the lazy.',
+      'Just like Christer, Frank has perfect pitch and works extra, like he needs it, with tuning pianos. The fact that he’s chosen the drums as his main instrument says a lot about drummers and sportsmen.',
+    ],
+  },
+  {
+    name: 'Sven Westin',
+    role: 'Vocals & Percussion',
+    paragraphs: [
+      'Tries’ hard to hide the fact that he used to be the drummer of the band, but this is very obvious when his mouth much too often is faster than his brain. Sven feels that he is a talent in humor but the rest of the band laughs at that.',
+      'Every dime Sven makes is put into his large record collection and he looks upon new “rubbish” like mp3 and streaming with a total lack of understanding.',
+    ],
+  },
+  {
+    name: 'Ulf Nordquist',
+    role: 'Vocals, Bass, Harmonica, Keyboard & Guitar',
+    paragraphs: [
+      'Being the main songwriter of the band it sometimes seems that he can write a song about anything, but sometimes it might have been best if he didn’t. Ulf has his own recording studio and a nightclub where you can eat in the dark and be entertained by waiters who probably are real ugly.',
+      'In the summer Ulf leaves his home in Stockholm and hides in the countryside smelling the flowers, grass and probably cows hit.',
+    ],
+  },
+  {
+    name: 'Ulrika Norelius',
+    role: 'Vocals & Keyboard',
+    paragraphs: [
+      'Ulrika is despite what Johan says the most enchanting member of the band. Her country roots are slowly but surely wearing off and she is becoming a real Stockholm girl.',
+    ],
+  },
+  {
+    name: 'Johan Häglerud',
+    role: 'Guitar, Bass, Keyboard & Vocals',
+    paragraphs: [
+      'The youngest member of the band and according to himself the most attractive. Johan is a brilliant musician and sound technician but has a tendency to go off to sea for months at an end, and sometimes finds it hard to answer the phone.',
+      'Johan has a very unhealthy love for old horrible Swedish songs that he shares with drummer Frank. It would probably be best if they both went to a shrink, but they claim that they feel all right.',
+    ],
+  },
+]
+
+function BandMembersEnglish() {
+  return (
+    <section>
+      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
+        Synliga in English
+      </p>
+      <h1 className="text-4xl font-bold text-white sm:text-5xl">Members</h1>
+      <div className="mt-8 grid gap-5 md:grid-cols-2">
+        {members.map((member) => (
+          <article
+            key={member.name}
+            className="rounded-lg border border-white/10 bg-white/[0.04] p-5"
+          >
+            <h2 className="text-2xl font-semibold text-white">
+              {member.name}
+            </h2>
+            <p className="mt-2 text-sm font-medium text-emerald-300">
+              {member.role}
+            </p>
+            <div className="mt-5 space-y-4 text-sm leading-6 text-zinc-300">
+              {member.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export default BandMembersEnglish
