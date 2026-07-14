@@ -47,7 +47,7 @@ function Links() {
   return (
     <section>
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
-        Länkar
+        Mer från Synliga
       </p>
       <h1 className="text-4xl font-bold text-white sm:text-5xl">Länkar</h1>
       <div className="mt-8 grid gap-5 md:grid-cols-2">
