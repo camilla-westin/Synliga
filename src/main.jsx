@@ -16,6 +16,8 @@ import MorkershowEnglish from './pages/MorkershowEnglish.jsx'
 import Press from './pages/Press.jsx'
 import './styles.css'
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
 const router = createBrowserRouter(
   [
     {
@@ -46,7 +48,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: import.meta.env.BASE_URL,
+    basename: routerBasename,
   },
 )
 
