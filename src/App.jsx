@@ -33,6 +33,8 @@ const languagePairs = {
   '/en/discography': '/diskografi',
 }
 
+const assetPath = (path) => `${import.meta.env.BASE_URL}assets/${path}`
+
 function App() {
   const { pathname } = useLocation()
   const isEnglish = pathname === '/en' || pathname.startsWith('/en/')
@@ -47,7 +49,7 @@ function App() {
             to={isEnglish ? '/en' : '/'}
             className="text-2xl font-semibold tracking-wide"
           >
-            <img src="/assets/synliga-logga2.png" alt="Synliga logotyp" className="h-10 w-auto" />
+            <img src={assetPath('synliga-logga2.png')} alt="Synliga logotyp" className="h-10 w-auto" />
           </NavLink>
 
           <div className="flex flex-wrap gap-2">
@@ -84,7 +86,7 @@ function App() {
       </header>
 
       <main className="mx-auto max-w-6xl px-6 py-12">
-        <img src="/assets/synliga2.jpg" alt="Gruppbild på Synliga med Sven, Ulrika, Johan och Ulf" className="mb-8" />
+        <img src={assetPath('synliga2.jpg')} alt="Gruppbild på Synliga med Sven, Ulrika, Johan och Ulf" className="mb-8" />
         <Outlet />
       </main>
     </div>

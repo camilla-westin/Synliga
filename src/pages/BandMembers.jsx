@@ -131,12 +131,14 @@ const formerMembers = [
   },
 ]
 
+const assetPath = (path) => `${import.meta.env.BASE_URL}assets/${path}`
+
 function MemberCard({ member }) {
   return (
     <article className="rounded-lg border border-white/10 bg-white/[0.04] p-5 flex flex-col sm:flex-row sm:items-start sm:gap-5">
       {member.image ? (
         <img
-          src={`/assets/${member.image}`}
+          src={assetPath(member.image)}
           alt={member.name}
           className="mb-5 rounded-lg"
           width="150"
