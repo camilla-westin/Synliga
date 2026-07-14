@@ -2,6 +2,7 @@ const members = [
   {
     name: 'Christer Tull',
     role: 'Gitarr, bas, klaviatur & sång',
+    image: 'christer1.jpg',
     paragraphs: [
       'En otrolig musikalisk talang med absolut gehör. Försöker ibland att använda sitt magiska musiköra på att lära sig främmande språk, men bara lagom främmande.',
       'Christer är en stor kattälskare och det är som alla vet ett mer nyttigt sätt att ta sig en jamare.',
@@ -11,6 +12,7 @@ const members = [
   {
     name: 'Frank Skaret',
     role: 'Trummor',
+    image: 'frank.jpg',
     paragraphs: [
       'Är en idog idrottare och håller sig trots sin höga ålder i fin form.',
       'Jobbar som en ivrig bäver på ”Insyn” och tycker att fritid är för blekfisar och arbetsskygga.',
@@ -21,6 +23,7 @@ const members = [
   {
     name: 'Sven Westin',
     role: 'Sång & slagverk',
+    image: 'sven.jpg',
     paragraphs: [
       'Var tidigare trumslagare i bandet, något han ivrigt försöker dölja, men ränderna går aldrig ur. Detta kan förklara varför ibland munnen är snabbare än huvudet.',
       'Sven har en stor komisk talang och hans mål i livet verkar vara att få resten av världen att se detta lika klart som han själv.',
@@ -30,6 +33,7 @@ const members = [
   {
     name: 'Ulf Nordquist',
     role: 'Sång, bas, munspel, gitarr och klaviatur',
+    image: 'ulf.jpg',
     paragraphs: [
       '”I ljudverkstan Ljudolf kan du förverkliga dina musikaliska drömmar”, lyder den slogan Ulf har på sin inspelningsstudio. Där kan man alltså hyra in sig och sitta och drömma.',
       'Ulf är en fantastiskt driven låtskrivare och kan i princip tota ihop en trudelutt om nästan vad som helst, men ibland borde han kanske låta bli.',
@@ -39,6 +43,7 @@ const members = [
   {
     name: 'Ulrika Norelius',
     role: 'Sång & klaviatur',
+    image: 'ulrika.jpg',
     paragraphs: [
       'Ulrika är oavsett vad Johan säger med lätthet bandets fagraste uppenbarelse.',
       'Född i Värmland undanber hon sig skämt om koppar med kaffe. Numera en frejdig stockholmstjej har lantlollan börjat vittra bort och hon jobbar på SRF, som tyvärr inte betyder Sweden Rock Festival i det här fallet.',
@@ -47,6 +52,7 @@ const members = [
   {
     name: 'Johan Häglerud',
     role: 'Gitarr, bas, klaviatur & sång',
+    image: 'johan.jpg',
     paragraphs: [
       'Bandets absolut yngste medlem, och enligt honom själv den snyggaste.',
       'Johan är en lysande musiker och ljudtekniker men har en olycklig tendens att försvinna till sjöss månader i sträck och att bara sporadiskt svara i telefon.',
@@ -117,6 +123,7 @@ const formerMembers = [
   {
     name: 'Marie Häglerud',
     role: '',
+    image: 'marie.jpg',
     paragraphs: [
       'Vid hans sida sitter en av våra grundare, sångerskan och klaviaturspelaren:',
       'och tänker ut nya häftiga sångarrangemang åt samma orkester. Gud hjälpe den som inte håller sin stämma! Det lär vara fullt drag bland molnen sedan Marie kommit dit, det är vi helt säkra på.',
@@ -126,17 +133,27 @@ const formerMembers = [
 
 function MemberCard({ member }) {
   return (
-    <article className="rounded-lg border border-white/10 bg-white/[0.04] p-5">
-      <h2 className="text-2xl font-semibold text-white">{member.name}</h2>
-      {member.role ? (
-        <p className="mt-2 text-sm font-medium text-emerald-300">
-          {member.role}
-        </p>
+    <article className="rounded-lg border border-white/10 bg-white/[0.04] p-5 flex flex-col sm:flex-row sm:items-start sm:gap-5">
+      {member.image ? (
+        <img
+          src={`/assets/${member.image}`}
+          alt={member.name}
+          className="mb-5 rounded-lg"
+          width="150"
+        />
       ) : null}
-      <div className="mt-5 space-y-4 text-sm leading-6 text-zinc-300">
-        {member.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
+      <div>
+        <h2 className="text-2xl font-semibold text-white">{member.name}</h2>
+        {member.role ? (
+          <p className="mt-2 text-sm font-medium text-emerald-300">
+            {member.role}
+          </p>
+        ) : null}
+        <div className="mt-5 space-y-4 text-sm leading-6 text-zinc-300">
+          {member.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
       </div>
     </article>
   )

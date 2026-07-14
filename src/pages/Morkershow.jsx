@@ -65,7 +65,7 @@ function Morkershow() {
   return (
     <section>
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
-        Mörkershow
+        Show
       </p>
       <h1 className="text-4xl font-bold text-white sm:text-5xl">
         Mörkershow
