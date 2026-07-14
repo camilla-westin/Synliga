@@ -80,9 +80,12 @@ const archivePosts = [
   },
 ]
 
+const assetPath = (path) => `${import.meta.env.BASE_URL}assets/${path}`
+
 function Home() {
   return (
     <section>
+      <img src={assetPath('synliga2.jpg')} alt="Gruppbild på Synliga med Sven, Ulrika, Johan och Ulf" className="mb-8" />
       <div className="max-w-4xl">
         <h1 className="text-4xl font-bold text-white sm:text-5xl">
           Boka Synliga

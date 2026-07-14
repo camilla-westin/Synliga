@@ -5,6 +5,7 @@ const releases = [
     type: 'Album',
     description:
       'Includes all the songs from the bands stage show with the same name. The title is a game with words and can mean visible in the dark. This album is in Swedish.',
+    image: 'synligaimorker150x150.jpg',
     links: [
       {
         label: 'Listen on Spotify',
@@ -22,6 +23,7 @@ const releases = [
     type: 'Single',
     description:
       '“There’s no need to be stupid just because you want to play some rock’ n’ roll, but it’s helpful”. A single with the same song in a Swedish and an English version.',
+    image: 'rakknrollomslag2-150x150.jpg',
     links: [
       {
         label: 'Listen on Spotify',
@@ -35,6 +37,7 @@ const releases = [
     type: 'Album',
     description:
       'Includes most of the songs from the stage show with the same name. Two of the songs are in English.',
+    image: 'sinne150.jpg',
     links: [
       {
         label: 'Listen on Spotify',
@@ -52,6 +55,7 @@ const releases = [
     type: 'Single',
     description:
       'Includes the Songs, ”Ett slimmat sparpaket”, ”Kärleken är blind idag” and ”Blindaste bandet i landet.”',
+    image: "image075-150x150.jpg",
     links: [
       {
         label: 'Listen on Spotify',
@@ -65,6 +69,7 @@ const releases = [
     type: 'Feature',
     description:
       'Various artists. Played and produced by Synliga and some of the members of the band has also written music and lyrics to some of the songs.',
+    image: 'image016-150x150.jpg'
   },
   {
     title: 'Energi från kulturkraft',
@@ -72,6 +77,7 @@ const releases = [
     type: 'Feature',
     description:
       'Various artists. Synligas song on this album is, “Kärleken är blind idag/Love Can’t See a Thing Today.”',
+    image: 'image062-150x150.jpg'
   },
   {
     title: 'Konsten att åka färdtjänst',
@@ -79,6 +85,7 @@ const releases = [
     type: 'Feature',
     description:
       'Various artists. The song by Synliga on this album is called, “Ett slimmat sparpaket/Barking at The Moon.”',
+    image: 'image064-150x150.png'
   },
   {
     title: 'All over the world',
@@ -86,6 +93,7 @@ const releases = [
     type: 'Single',
     description:
       'Released as a single to coincide with the groups concerts in Japan 2000.',
+    image: 'image070-150x150.jpg',
     links: [
       {
         label: 'Listen on Spotify',
@@ -97,12 +105,14 @@ const releases = [
     title: 'Out of sight',
     year: '1998',
     type: 'Album',
+    image: 'outofsight-150x150.jpg',
   },
   {
     title: 'Blindträff/Blind Date',
     year: '1997',
     type: 'Album',
     description: 'Material, live and studio, from the bands stage show 1997.',
+    image: 'image058-150x150.jpg',
     links: [
       {
         label: 'Listen on Spotify',
@@ -120,6 +130,7 @@ const releases = [
     type: 'Feature',
     description:
       'Various artists.“I Believe Blindly in Father Christmas/Jag tror på tomten blint”, is the song by Synliga on this album recorded at bass player Ulfs studio Ljudolf. Several of the members also appear on other tracks.',
+    image: 'image066-150x150.png',
   },
   {
     title: 'Gå på/Go On',
@@ -127,12 +138,14 @@ const releases = [
     type: 'Album',
     description:
       'Includes 4 tracks, two songs both in Swedish and in English. Recorded in Cuba in November of 1991 by the band and the local musicians Alejandro Pu Bles, Amando de Jesus Dedu Hernandez, Rogelio Ernesto Gatell Coto and Julian Gil Oropesa.',
+    image: 'ga_pa-150x150.jpg',
   },
   {
     title: 'Kallebalik',
     year: '1990',
     type: 'Cassette',
     description: 'A musical by the band released only on cassette.',
+    image: 'kallebalik-150x150.jpg',
   },
   {
     title: 'Urval',
@@ -140,6 +153,7 @@ const releases = [
     type: 'Album',
     description:
       'Various artists. The song by the band on this one is, “Blind.”',
+    image: 'ingenbild1501.jpg'
   },
   {
     title: 'Festival',
@@ -147,6 +161,7 @@ const releases = [
     type: 'Album',
     description:
       'Various artists. “Finns där ej människa ändå” is the bands contribution to this album.',
+    image: 'ingenbild1501.jpg'
   },
   {
     title: 'Ljudskap',
@@ -154,53 +169,65 @@ const releases = [
     type: 'Album',
     description:
       'Various artists. First thing released by the group and the song on this one is, “Blind.”',
+    image: 'ingenbild1501.jpg'
   },
 ]
+
+const assetPath = (path) => `${import.meta.env.BASE_URL}assets/${path}`
 
 function DiscographyEnglish() {
   return (
     <section>
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
-        Discography
+        Synliga in English
       </p>
       <h1 className="text-4xl font-bold text-white">Discography</h1>
-      <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
         {releases.map((release) => (
           <article
             key={release.title}
-            className="flex min-h-64 flex-col rounded-lg border border-white/10 bg-white/[0.04] p-5"
+            className="flex min-h-64 rounded-lg border border-white/10 bg-white/[0.04] p-5"
           >
-            <div className="flex items-center justify-between gap-4">
-              <p className="text-sm font-medium text-emerald-300">
-                {release.type}
-              </p>
-              <p className="text-sm text-zinc-400">{release.year}</p>
-            </div>
-            <h2 className="mt-2 text-xl font-semibold text-white">
-              {release.title}
-            </h2>
-            {release.description ? (
-              <p className="mt-4 flex-1 text-sm leading-6 text-zinc-300">
-                {release.description}
-              </p>
-            ) : (
-              <div className="flex-1" />
-            )}
-            {release.links?.length ? (
-              <div className="mt-5 flex flex-wrap gap-2">
-                {release.links.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-md border border-emerald-300/30 px-3 py-2 text-sm font-medium text-emerald-200 transition hover:border-emerald-300 hover:bg-emerald-300 hover:text-zinc-950"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
+            {release.image ? (
+              <img
+                src={assetPath(release.image)}
+                alt={release.title}
+                className="mb-5 rounded-lg w-[150px] h-[150px] object-cover object-center mr-5"
+              />
             ) : null}
+            <div>
+              <div className="flex items-center justify-between gap-4">
+                <p className="text-sm font-medium text-emerald-300">
+                  {release.type}
+                </p>
+                <p className="text-sm text-zinc-400">{release.year}</p>
+              </div>
+              <h2 className="mt-2 text-xl font-semibold text-white">
+                {release.title}
+              </h2>
+              {release.description ? (
+                <p className="mt-4 flex-1 text-sm leading-6 text-zinc-300">
+                  {release.description}
+                </p>
+              ) : (
+                <div className="flex-1" />
+              )}
+              {release.links?.length ? (
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {release.links.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-md border border-emerald-300/30 px-3 py-2 text-sm font-medium text-emerald-200 transition hover:border-emerald-300 hover:bg-emerald-300 hover:text-zinc-950"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              ) : null}
+              </div>
           </article>
         ))}
       </div>

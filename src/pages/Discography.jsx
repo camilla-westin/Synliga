@@ -4,6 +4,7 @@ const releases = [
     year: '2012',
     type: 'Album',
     description: 'Innehåller alla låtarna från krogshowen med samma namn.',
+    image: 'synligaimorker150x150.jpg',
     links: [
       {
         label: 'Lyssna på Spotify',
@@ -21,6 +22,7 @@ const releases = [
     type: 'Singel',
     description:
       'Du behöver inte vara dum i huvudet för att spela Råkk ‘N’ Råll, men det hjälper!',
+    image: 'rakknrollomslag2-150x150.jpg',
     links: [
       {
         label: 'Lyssna på Spotify',
@@ -34,6 +36,7 @@ const releases = [
     type: 'Album',
     description:
       'Innehåller de flesta låtarna ur krogshowen BlindDate, singelspåren All over the world och Slimmat sparpaket samt annat ur Synligas repertoar.',
+    image: 'sinne150.jpg',
     links: [
       {
         label: 'Lyssna på Spotify',
@@ -51,6 +54,7 @@ const releases = [
     type: 'Singel',
     description:
       'Med Ett slimmat sparpaket, Kärleken är blind idag och Blindaste bandet i landet.',
+    image: "image075-150x150.jpg",
     links: [
       {
         label: 'Lyssna på Spotify',
@@ -64,6 +68,7 @@ const releases = [
     type: 'Feature',
     description:
       'Synliga har producerat skivan och kompat artisterna i Synskadades Melodifestival 2004. Många av bandets personer medverkar också som låtskrivare.',
+    image: 'image016-150x150.jpg'
   },
   {
     title: 'Energi från kulturkraft',
@@ -71,6 +76,7 @@ const releases = [
     type: 'Feature',
     description:
       'Samlingsskivan Energi från Kulturkraft, utgiven av SRF, där 19 synskadade artister presenteras och Synliga medverkar med låten Kärleken är blind idag.',
+    image: 'image062-150x150.jpg'
   },
   {
     title: 'Konsten att åka färdtjänst',
@@ -78,6 +84,7 @@ const releases = [
     type: 'Feature',
     description:
       'Utgiven av Unga Synskadade Stockholm & Gotland. Synliga medverkar med låten Ett slimmat sparpaket.',
+    image: 'image064-150x150.png'
   },
   {
     title: 'All over the world',
@@ -85,6 +92,7 @@ const releases = [
     type: 'Singel',
     description:
       'Singel som släpptes i samband med att Synliga var i Japan 2000.',
+    image: 'image070-150x150.jpg',
     links: [
       {
         label: 'Lyssna på Spotify',
@@ -96,12 +104,14 @@ const releases = [
     title: 'Out of sight',
     year: '1998',
     type: 'Kassett',
+    image: 'kallebalik-150x150.jpg',
   },
   {
     title: 'Blindträff',
     year: '1997',
     type: 'Album',
     description: 'Resultatet av Synligas krogshow på Mossebacke och Brukarhuset.',
+    image: 'image058-150x150.jpg',
     links: [
       {
         label: 'Lyssna på Spotify',
@@ -118,6 +128,7 @@ const releases = [
     year: '1995',
     type: 'Album',
     description: 'Synligas spår heter Jag tror på tomten blint.',
+    image: 'image066-150x150.png',
   },
   {
     title: 'Gå På',
@@ -125,11 +136,13 @@ const releases = [
     type: 'Album',
     description:
       'I november 1991 var Synliga på Kuba och spelade in singeln Gå på/Lite på Calle? tillsammans med slagverkarna Alejandro Pu Bles, Amando de Jesus Dedu Hernandez, Rogelio Ernesto Gatell Coto och trumpetaren Julian Gil Oropesa.',
+    image: 'ga_pa-150x150.jpg',
   },
   {
     title: 'Kallebalik',
     year: '1990',
     type: 'Album',
+    image: 'kallebalik-150x150.jpg',
   },
   {
     title: 'Urval',
@@ -137,6 +150,7 @@ const releases = [
     type: 'Album',
     description:
       'Skivans namn är Urval och på samlings-LP:n medverkar Synliga med Blind.',
+    image: 'ingenbild1501.jpg'
   },
   {
     title: 'Festival',
@@ -144,6 +158,7 @@ const releases = [
     type: 'Album',
     description:
       'Skivans namn är Festival och det är en samlings-LP. Synliga medverkar med Finns där ej människa ändå.',
+    image: 'ingenbild1501.jpg'
   },
   {
     title: 'Ljudskap',
@@ -151,8 +166,11 @@ const releases = [
     type: 'Album',
     description:
       'Skivans namn är Ljudskap och det är en samlings-LP. Synliga medverkar med spåret Blind.',
+    image: 'ingenbild1501.jpg'
   },
 ]
+
+const assetPath = (path) => `${import.meta.env.BASE_URL}assets/${path}`
 
 function Discography() {
   return (
@@ -160,44 +178,53 @@ function Discography() {
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
         Hela samlingen
       </p>
-      <h1 className="text-4xl font-bold text-white">Discography</h1>
-      <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <h1 className="text-4xl font-bold text-white">Discografi</h1>
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
         {releases.map((release) => (
           <article
             key={release.title}
-            className="flex min-h-64 flex-col rounded-lg border border-white/10 bg-white/[0.04] p-5"
+            className="flex min-h-64 rounded-lg border border-white/10 bg-white/[0.04] p-5"
           >
-            <div className="flex items-center justify-between gap-4">
-              <p className="text-sm font-medium text-emerald-300">
-                {release.type}
-              </p>
-              <p className="text-sm text-zinc-400">{release.year}</p>
-            </div>
-            <h2 className="mt-2 text-xl font-semibold text-white">
-              {release.title}
-            </h2>
-            {release.description ? (
-              <p className="mt-4 flex-1 text-sm leading-6 text-zinc-300">
-                {release.description}
-              </p>
-            ) : (
-              <div className="flex-1" />
-            )}
-            {release.links?.length ? (
-              <div className="mt-5 flex flex-wrap gap-2">
-                {release.links.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-md border border-emerald-300/30 px-3 py-2 text-sm font-medium text-emerald-200 transition hover:border-emerald-300 hover:bg-emerald-300 hover:text-zinc-950"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
+            {release.image ? (
+              <img
+                src={assetPath(release.image)}
+                alt={release.title}
+                className="mb-5 rounded-lg w-[150px] h-[150px] object-cover object-center mr-5"
+              />
             ) : null}
+            <div>
+              <div className="flex items-center justify-between gap-4">
+                <p className="text-sm font-medium text-emerald-300">
+                  {release.type}
+                </p>
+                <p className="text-sm text-zinc-400">{release.year}</p>
+              </div>
+              <h2 className="mt-2 text-xl font-semibold text-white">
+                {release.title}
+              </h2>
+              {release.description ? (
+                <p className="mt-4 flex-1 text-sm leading-6 text-zinc-300">
+                  {release.description}
+                </p>
+              ) : (
+                <div className="flex-1" />
+              )}
+              {release.links?.length ? (
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {release.links.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-md border border-emerald-300/30 px-3 py-2 text-sm font-medium text-emerald-200 transition hover:border-emerald-300 hover:bg-emerald-300 hover:text-zinc-950"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              ) : null}
+            </div>
           </article>
         ))}
       </div>

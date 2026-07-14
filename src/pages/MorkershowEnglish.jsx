@@ -68,7 +68,7 @@ function MorkershowEnglish() {
   return (
     <section>
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
-        Shows in the dark
+        Synliga in English
       </p>
       <h1 className="text-4xl font-bold text-white sm:text-5xl">
         Shows in the dark

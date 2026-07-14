@@ -86,7 +86,6 @@ function App() {
       </header>
 
       <main className="mx-auto max-w-6xl px-6 py-12">
-        <img src={assetPath('synliga2.jpg')} alt="Gruppbild på Synliga med Sven, Ulrika, Johan och Ulf" className="mb-8" />
         <Outlet />
       </main>
     </div>
