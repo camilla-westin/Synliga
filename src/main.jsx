@@ -16,34 +16,39 @@ import MorkershowEnglish from './pages/MorkershowEnglish.jsx'
 import Press from './pages/Press.jsx'
 import './styles.css'
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: 'about', element: <About /> },
+        { path: 'om-synliga', element: <About /> },
+        { path: 'bandmedlemmar', element: <BandMembers /> },
+        { path: 'om-synliga/bandmedlemmar', element: <BandMembers /> },
+        { path: 'morkershow', element: <Morkershow /> },
+        { path: 'discography', element: <Discography /> },
+        { path: 'diskografi', element: <Discography /> },
+        { path: 'links', element: <Links /> },
+        { path: 'lankar', element: <Links /> },
+        { path: 'press', element: <Press /> },
+        { path: 'contact', element: <Home /> },
+        { path: 'en', element: <HomeEnglish /> },
+        { path: 'en/about', element: <AboutEnglish /> },
+        { path: 'en/band-members', element: <BandMembersEnglish /> },
+        { path: 'en/shows-in-the-dark', element: <MorkershowEnglish /> },
+        { path: 'en/darkness-show', element: <MorkershowEnglish /> },
+        { path: 'en/discography', element: <DiscographyEnglish /> },
+        { path: 'en/links', element: <Links /> },
+        { path: 'en/press', element: <Press /> },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <App />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'about', element: <About /> },
-      { path: 'om-synliga', element: <About /> },
-      { path: 'bandmedlemmar', element: <BandMembers /> },
-      { path: 'om-synliga/bandmedlemmar', element: <BandMembers /> },
-      { path: 'morkershow', element: <Morkershow /> },
-      { path: 'discography', element: <Discography /> },
-      { path: 'diskografi', element: <Discography /> },
-      { path: 'links', element: <Links /> },
-      { path: 'lankar', element: <Links /> },
-      { path: 'press', element: <Press /> },
-      { path: 'contact', element: <Home /> },
-      { path: 'en', element: <HomeEnglish /> },
-      { path: 'en/about', element: <AboutEnglish /> },
-      { path: 'en/band-members', element: <BandMembersEnglish /> },
-      { path: 'en/shows-in-the-dark', element: <MorkershowEnglish /> },
-      { path: 'en/darkness-show', element: <MorkershowEnglish /> },
-      { path: 'en/discography', element: <DiscographyEnglish /> },
-      { path: 'en/links', element: <Links /> },
-      { path: 'en/press', element: <Press /> },
-    ],
+    basename: import.meta.env.BASE_URL,
   },
-])
+)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
