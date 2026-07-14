@@ -13,7 +13,7 @@ const navigation = {
     { to: '/en/about', label: 'About' },
     { to: '/en/band-members', label: 'Band Members' },
     { to: '/en/shows-in-the-dark', label: 'Shows in the dark' },
-    { to: '/en/discography', label: 'Discography' }
+    { to: '/en/discography', label: 'Discography' },
   ],
 }
 
@@ -57,7 +57,7 @@ function App() {
                 to={item.to}
                 className={({ isActive }) =>
                   [
-                    'rounded-md px-3 py-2 text-sm font-medium transition',
+                    'rounded-md px-3 py-2 text-sm font-medium uppercase transition',
                     isActive
                       ? 'bg-emerald-400 text-zinc-950'
                       : 'text-zinc-300 hover:bg-white/10 hover:text-white',
