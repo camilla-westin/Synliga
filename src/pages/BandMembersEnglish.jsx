@@ -19,31 +19,34 @@ const members = [
     name: 'Sven Westin',
     role: 'Vocals & Percussion',
     paragraphs: [
-      'Tries’ hard to hide the fact that he used to be the drummer of the band, but this is very obvious when his mouth much too often is faster than his brain. Sven feels that he is a talent in humor but the rest of the band laughs at that.',
+      'Tries hard to hide the fact that he used to be the drummer of the band, but this is very obvious when his mouth much too often is faster than his brain. Sven feels that he is a talent in humor but the rest of the band laughs at that.',
       'Every dime Sven makes is put into his large record collection and he looks upon new “rubbish” like mp3 and streaming with a total lack of understanding.',
     ],
   },
   {
     name: 'Ulf Nordquist',
-    role: 'Vocals, Bass, Harmonica, Keyboard & Guitar',
+    role: 'Vocals, Guitar, Bass, Keyboard & Harmonica',
     paragraphs: [
-      'Being the main songwriter of the band it sometimes seems that he can write a song about anything, but sometimes it might have been best if he didn’t. Ulf has his own recording studio and a nightclub where you can eat in the dark and be entertained by waiters who probably are real ugly.',
-      'In the summer Ulf leaves his home in Stockholm and hides in the countryside smelling the flowers, grass and probably cows hit.',
+      'Ulf is the main songwriter of the band and can very quickly write a magnificent tune.',
+      'Ulf has his own nightclub where you can eat in the dark and the waiters are probably real ugly.',
+      'When he tires of nightclubbing he runs off to Greece or the Canary Islands. He is trying to learn Greek but claims that, “it all sounds like Greek to me!”',
     ],
   },
   {
     name: 'Ulrika Norelius',
-    role: 'Vocals & Keyboard',
+    role: 'Vocals, Keyboard',
     paragraphs: [
-      'Ulrika is despite what Johan says the most enchanting member of the band. Her country roots are slowly but surely wearing off and she is becoming a real Stockholm girl.',
+      'Ulrika used to be a countrygirl but is now deeply rooted in Stockholm.',
+      'Ulrika might look like an angel but don’t let that fool you. She knows some of the most immoral lyrics you can ever imagine and after one or two Caipirinha she will sing songs that will make your face turn red.',
     ],
   },
   {
     name: 'Johan Häglerud',
-    role: 'Guitar, Bass, Keyboard & Vocals',
+    role: 'Bass, Guitar, Keyboard & Vocals',
     paragraphs: [
-      'The youngest member of the band and according to himself the most attractive. Johan is a brilliant musician and sound technician but has a tendency to go off to sea for months at an end, and sometimes finds it hard to answer the phone.',
-      'Johan has a very unhealthy love for old horrible Swedish songs that he shares with drummer Frank. It would probably be best if they both went to a shrink, but they claim that they feel all right.',
+      'Johan is a brilliant musician and sound technician.',
+      'Johan is as lovely as he is hard to get hold off and is almost impossible to reach by phone or sms.',
+      'Like a few other members of Synliga Johan has a very unhealthy love for old horrible Swedish songs. A shrink could be helpful but those with this persuasion claim that they feel fine.',
     ],
   },
 ]
