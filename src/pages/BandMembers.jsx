@@ -35,9 +35,9 @@ const members = [
     role: 'Sång, bas, munspel, gitarr och klaviatur',
     image: 'ulf.jpg',
     paragraphs: [
-      '”I ljudverkstan Ljudolf kan du förverkliga dina musikaliska drömmar”, lyder den slogan Ulf har på sin inspelningsstudio. Där kan man alltså hyra in sig och sitta och drömma.',
-      'Ulf är en fantastiskt driven låtskrivare och kan i princip tota ihop en trudelutt om nästan vad som helst, men ibland borde han kanske låta bli.',
-      'Ulf är så förtjust att gå på krogen att han startat sin egen svartklubb där han kan härja fritt. När han däremot fått nog av stadslivets fröjder beger han sig ut i grönsakerna och blir en sävlig lantjunker.',
+      'Ulf är en oerhört driven låtskrivare som på nolltid kan skapa en låt i världsklass.',
+      'Att gå på krogen verkar vara ett starkt intresse eftersom han skaffat sig en egen. Den liggr på söder och är utan tvivel stadens mörkaste restaurant.',
+      'När kroglivet blir för mycket drar Ulf gärna till Grekland eller Kanarieöarna för att få lite sol istället för mörker och lite värme på sin basker.'
     ],
   },
   {
@@ -45,8 +45,9 @@ const members = [
     role: 'Sång & klaviatur',
     image: 'ulrika.jpg',
     paragraphs: [
-      'Ulrika är oavsett vad Johan säger med lätthet bandets fagraste uppenbarelse.',
-      'Född i Värmland undanber hon sig skämt om koppar med kaffe. Numera en frejdig stockholmstjej har lantlollan börjat vittra bort och hon jobbar på SRF, som tyvärr inte betyder Sweden Rock Festival i det här fallet.',
+      'Ulrika är en sångfågel från Värmland som numer kan räkna sig som Stockholmare och därför undanber sig skämt om koppar med kaffe.',
+      'I likhet med Frank och Johan tar hon gärna på sig löparskorna och det vill nog till att man håller sig i form om man som Ulrika har en chefsposition på jobbet.',
+      'Ulrika må se ut som en ängel men låt er icke luras för hon kan en oändlig massa djupt omoraliska visor som hon med stor glädje framför flerstämmigt med vänner.'
     ],
   },
   {
@@ -54,9 +55,21 @@ const members = [
     role: 'Gitarr, bas, klaviatur & sång',
     image: 'johan.jpg',
     paragraphs: [
-      'Bandets absolut yngste medlem, och enligt honom själv den snyggaste.',
-      'Johan är en lysande musiker och ljudtekniker men har en olycklig tendens att försvinna till sjöss månader i sträck och att bara sporadiskt svara i telefon.',
-      'Johan har liksom skinnplågaren Frank en mycket sjuk dragning till gamla svenska dansbandslåtar. Ju sämre de är desto mer njuter de drabbade av denna åkomma.',
+      'Johan är en lysande musiker, ljudtekniker och liksom Frank i sitt jobb på Insyn väl insatt modern teknik.',
+      'Johan är en härlig person men mer än lovligt svår att få tag i ibland då han bara sporadiskt svarar i telefon eller på sms.',
+      'Johan liksom några andra i bandet har en sjuklig dragning till gamla svenska dansbandslåtar. Ju värre de är desto mer njuts det!',
+      'Under sina resor när och fjärran i jobbet lär Johan ha tid att vaska fram sådana ”pärlor” för spridning till de andra fantasterna.'
+    ],
+  },
+  {
+    name: 'Sara Backström',
+    role: 'Tvärflöjt, klaviatur och Sång',
+    image: 'sara.jpg',
+    paragraphs: [
+      'Sara ersatte Eva Nilsson uppställningen och var med i något år.',
+      'Sara är en flitig musiker och har turnerat med en egen trio och har varit med i otaliga konstellationer där hon spelat allt från jazz till afrikansk musik.',
+      'Sara har av och till vikarierat i både Synliga och på mörkerrestauranterna. Sedan 2023 har hon varit fast personal med Johan, Ulrika och Sven på Svartkrogen.',
+      '2026 ersatte Sara Ulf på bandets turné i Brasilien och bidrog till stor del till att bandet lät så bra.'
     ],
   },
 ]
@@ -69,9 +82,10 @@ const formerMembers = [
     name: 'Joakim ”Jocke” Centervik',
     role: 'Klaviatur & sång',
     paragraphs: [
-      'Jobbar på ”Funka Nu” där han kritiskt synar tillgängligheten på nätet för synskadade, så skärp er!',
-      'Joakim är en stor talang vad gäller att härma dialekter och röster. I mörkret låter han därför en och annan kändis bara med på gigen.',
-      'Det är också så att Joakim har ett minne som en gammal elefanthane och det är ofta som hans oändliga minnesbank är bandets sista utpost när det gäller någon händelse, tonart eller borttappad textsnutt.',
+      'Joakim lämnade jordelivet 2026.',
+      'Joakim jobbade många år på Funka Nu där han synade tillgängligheten för synskadade på nätet.',
+      'Han var en oerhörd begåvning på att härma röster och dialekter. På detta vis gästades Svartkrogen av mången kändis i mörkret . Ett par av hans paradnummer var Peps och DiLeva och den sistnämnda kom ofta, med Joakims benägna bistånd, som bocken från Gävle för att sprida kärlek och glädje.',
+      'I Synliga hade vi ofta stor nytta av Joakims minne då han påfallande ofta var den ende som kunde komma ihåg tonarter eller textrader på låtar vi inte spelat på länge.'
     ],
   },
   {
@@ -85,16 +99,8 @@ const formerMembers = [
     name: 'Eva Nilsson',
     role: 'Tvärflöjt och Sång',
     paragraphs: [
-      'Eva var med i det allra första Synliga. Lämnade bandet redan i det tidiga 80-talet. Hon bor i Örebro och arbetar som Ombudsman på SRF Västmanland. (Det finns på samlings-LPn ”Ljudskap”)',
-      'Eva återkom som gästmusiker på skivan, ”Sinnenas rum”, där hon lirade fantastiska flöjtar på en skabrös irländsk trudelutt.',
-    ],
-  },
-  {
-    name: 'Sara Backström',
-    role: 'Tvärflöjt, keyboard och Sång',
-    paragraphs: [
-      'Sara ersatte Eva i uppställningen och var med något år. Hon har turnerat med egen pianotrio mm. ( Den här upplagan kan man höra på TV-upptagningen av ”Superbebis”)',
-      'Sara har varit inhoppare i bandet vid några tillfällen och förekommer ofta vid spelningar på ”Svartkrogen” och ”Svartklubben.”',
+      'Eva var med i Synliga redan från början men slutade i bandet redan på tidigt 80-tal.',
+      'Hon återkom som gästmusiker på skivan ”sinnenas rum” där Eva spelade fantastiska flöjtar på en skabrös Irländsk låt.',
     ],
   },
   {
